@@ -2,7 +2,7 @@ var httpProxy = require('http-proxy');
 var url = require('url');
 var http = require('http');
 
-exports.createServer = function(port, subProxyHost, options) {	
+exports.createServer = function(port, subProxyHost /* e.g., localhost */, options) {	
 	httpProxy.createServer(	
 		function (req, res, proxy) {						
 			if(req.headers.host.indexOf(subProxyHost) == req.headers.host.length - subProxyHost.length) {
