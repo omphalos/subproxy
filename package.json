@@ -1,14 +1,11 @@
 {
   "name": "subproxy",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "subdomain proxy (for example to proxy www.google.com with www.google.com.localhost)",
   "bin": {
-    "subdomain-proxy": "./bin/subproxy"
+    "subproxy": "./host.js"
   },
-  "scripts": {
-    "start": "node ./bin/subproxy"
-  },
-  "main": "./lib/server",
+  "main": "./host.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/omphalos/subproxy.git"
@@ -16,16 +13,17 @@
   "keywords": [
     "subdomain",
     "proxy",
-	"http-proxy",
-	"node-http-proxy"
+    "http-proxy",
+    "node-http-proxy"
   ],
-  "dependencies" : {
-	"optimist"   :  "0.3.4",
-    "url"   	 :  "0.7.9",
-    "http-proxy" :  "0.8.1"
+  "dependencies": {
+    "optimist": "0.3.4",
+    "url": "0.7.9",
+    "http-proxy": "0.8.1"
   },
   "license": "unlicense",
   "engine": {
     "node": ">=0.8.1"
-  }
+  },
+  "author": "omphalos"
 }
