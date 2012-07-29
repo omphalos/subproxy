@@ -39,7 +39,7 @@ API usage
 		require('subproxy').handleRequest(subProxyHost, port, req, res, proxy);
 	}).listen(port);
 	
-**subproxy** depends on [node-http-proxy][https://github.com/nodejitsu/node-http-proxy/] to proxy websites.
+**subproxy** depends on **node-http-proxy** to proxy websites.
 
 Updating your hosts file to run on localhost
 ============================================
@@ -48,9 +48,9 @@ If running this with localhost, you will have to update your hosts file.
 Subdomains of localhost (such as www.google.com.localhost) won't be routed to localhost unless you update this file.
 Here are a couple tutorials I found which show you how to do this on different operating systems:
 
-[www.howtogeek.com][http://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/]
+http://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/
 
-[boomshadow.net][http://boomshadow.net/tools-utilities/hosts-mod/]
+http://boomshadow.net/tools-utilities/hosts-mod/
 
 For example, if you want to proxy www.google.com, you will need to add this to your hosts file:
 
@@ -66,7 +66,7 @@ For example, if your domain is example.com, you would want to create a wildcard 
 How it works
 ============
     
-The **subproxy** command line starts a server using [node-http-proxy][https://github.com/nodejitsu/node-http-proxy/].  Then, it listens for requests.  
+The **subproxy** command line starts a server using **node-http-proxy**.  Then, it listens for requests.  
 It will look at the request, and pull out the subdomain (for example, given www.google.com.localhost, it will pull out www.google.com).
 It will then proxy the connection to the subdomain (so you would see www.google.com content in your browser).
 Additionally, it will replace references to the proxied domain (www.google.com) in the location header.  
