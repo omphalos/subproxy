@@ -60,7 +60,7 @@ Make sure you use spaces, not tabs, to separate the IP from the domain.
 
 Public servers
 ==============
-If you host a subproxy on a public server, you will want to create a wildcard DNS record http://en.wikipedia.org/wiki/Wildcard_DNS_record..
+If you host a subproxy on a public server, you will want to create a wildcard DNS record http://en.wikipedia.org/wiki/Wildcard_DNS_record.
 For example, if your domain is example.com, you would want to create a wildcard DNS record for *.example.com to point traffic to your IP address.
 
 How it works
