@@ -1,6 +1,6 @@
 {
   "name": "subproxy",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "subdomain proxy (for example to proxy www.google.com with www.google.com.localhost)",
   "bin": {
     "subproxy": "./bin/subproxy"

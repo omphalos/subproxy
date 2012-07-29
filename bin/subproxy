@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-var subdomainProxy = require('../server');
 var argv = require('optimist').argv;
+var server = require('../server');
 
-if(argv.h) {
+if(argv.h || (!argv.p && ! argv.r)) {
 	console.log('usage: subproxy [options]');
 	console.log('');
 	console.log('starts a subproxy server using the specified command-line options');
@@ -11,12 +11,15 @@ if(argv.h) {
 	console.log('');
 	console.log('options:');
 	console.log('	-r: host root (example, localhost)');
-	console.log('	-p: port to listen on (example, 80) ');
+	console.log('	-p: port to listen on (example, 80)');
 	console.log('	-h: this help message');
 } else {
 	var port = argv.p || 80;
 	var subProxyHost = argv.r || 'localhost';
 
-	subdomainProxy.createServer(port, subProxyHost);
+	require('http-proxy').createServer(function (req, res, proxy) {
+		server.handleRequest(subProxyHost, port, req, res, proxy);
+	}).listen(port);
+	
 	console.log(subProxyHost + ' listening on port ' + port);
 }
