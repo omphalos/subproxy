@@ -10,9 +10,9 @@ if(argv.h || (!argv.p && ! argv.r)) {
 	console.log('(if you run with localhost, make sure to modify your hosts file!)');
 	console.log('');
 	console.log('options:');
-	console.log('	-r: host root (example, localhost)');
-	console.log('	-p: port to listen on (example, 80)');
-	console.log('	-h: this help message');
+	console.log('	-r host root (example, localhost)');
+	console.log('	-p port to listen on (example, 80)');
+	console.log('	-h this help message');
 } else {
 	var port = argv.p || 80;
 	var subProxyHost = argv.r || 'localhost';

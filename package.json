@@ -1,11 +1,11 @@
 {
   "name": "subproxy",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "subdomain proxy (for example to proxy www.google.com with www.google.com.localhost)",
   "bin": {
     "subproxy": "./bin/subproxy"
   },
-  "main": "./host.js",
+  "main": "./server.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/omphalos/subproxy.git"

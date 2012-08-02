@@ -12,9 +12,9 @@ Command-line usage
 
 This starts a subproxy server using the specified command-line options:
 
-    -r: host root (for example, localhost)
-    -p: port to listen on (for example, 80)
-    -h: this help message
+    -r host root (for example, localhost)
+    -p port to listen on (for example, 80)
+    -h this help message
 	
 Example
 =======
