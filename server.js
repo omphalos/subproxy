@@ -31,7 +31,7 @@ exports.handleRequest = function(
 
         // replace the host in the response
         var parsedUrl = url.parse(headers.location)
-        if(parsedUrl.host == req.headers.host) {
+        if(parsedUrl.host === req.headers.host) {
           parsedUrl.host = originalHost + (port === 80 ? '' : ':' + port)
           headers.location = url.format(parsedUrl)
         }
